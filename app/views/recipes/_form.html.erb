@@ -12,6 +12,15 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+
+    <%= f.label "Name" %> 
+    <%= f.text_field :name %> 
+    <br>
+    <br>
+    <%= f.label "Instructions" %> 
+    <%= f.text_area :instructions %>
+    <br>
+    <br>
+    <%= f.submit "Do eeet"%>
   </div>
 <% end %>
