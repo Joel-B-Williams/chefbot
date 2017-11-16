@@ -4,4 +4,10 @@
 <%= link_to 'Back', recipes_path %>
 
 <%= @recipe.name %>
+<!-- show list of existing ingredients -->
+<% @recipe.ingredients.each do |ingredient| %>
+  <%= ingredient.name%>
+  <%= ingredient.amount%>
+  <%= ingredient.measure%>
+<% end %>
 <%= @recipe.instructions %>

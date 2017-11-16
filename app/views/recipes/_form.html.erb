@@ -16,6 +16,15 @@
     <%= f.label "Name" %> 
     <%= f.text_field :name %> 
     <br>
+    <!-- show list of existing ingredients -->
+    <%= f.label "Ingredients" %> 
+    <% @recipe.ingredients.each do |ingredient| %>
+      <%= ingredient.name%>
+      <%= ingredient.amount%>
+      <%= ingredient.measure%>
+    <% end %>
+    <!-- move to EDIT so you have access to recipe id -->
+    <%= link_to 'Add Ingredient', new_recipe_ingredient_path(@recipe) %>  
     <br>
     <%= f.label "Instructions" %> 
     <%= f.text_area :instructions %>
