@@ -5,9 +5,13 @@
 
 <%= @recipe.name %>
 <!-- show list of existing ingredients -->
-<% @recipe.ingredients.each do |ingredient| %>
-  <%= ingredient.name%>
-  <%= ingredient.amount%>
-  <%= ingredient.measure%>
-<% end %>
+<ul>
+	<% @recipe.ingredients.each do |ingredient| %>
+	<li>
+	  <%= ingredient.name%>
+	  <%= ingredient.amount%>
+	  <%= ingredient.measure%>
+	</li>
+	<% end %>
+</ul>
 <%= @recipe.instructions %>

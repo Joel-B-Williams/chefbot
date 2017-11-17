@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
 	end
 	
 	def edit
-		@ingredient = Ingredient.new(ingredient_params)
+		@ingredient = Ingredient.find(params[:id])
 		@recipe = Recipe.find(params[:recipe_id])
 	end
 	
@@ -33,10 +33,27 @@ class IngredientsController < ApplicationController
 	end
 	
 	def update
+		@ingredient = Ingredient.find(params[:id])
+		recipe = Recipe.find(params[:recipe_id])
+		 respond_to do |format|
+      if @ingredient.update(ingredient_params)
+        format.html { redirect_to recipe_path(recipe), notice: 'ingredient was successfully updated.' }
+        format.json { render :show, status: :created, location: @ingredient }
+      else
+        format.html { render :edit }
+        format.json { render json: @ingredient.errors, status: :unprocessable_entity }
+      end
+    end
 	end
 	
 	def destroy
-		
+		ingredient = Ingredient.find(params[:id])
+		recipe = Recipe.find(params[:recipe_id])
+		ingredient.destroy
+		respond_to do |format|
+      format.html { redirect_to recipe_path(recipe), notice: 'Ingredient was successfully destroyed.' }
+      format.json { head :no_content }
+    end
 	end
 
 	private

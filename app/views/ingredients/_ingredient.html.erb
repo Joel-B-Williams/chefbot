@@ -1,0 +1,7 @@
+<li>
+	<%= ingredient.amount %>
+	<%= ingredient.measure %>
+	<%= ingredient.name %>
+	<%= link_to "-", [:edit,@recipe,ingredient]%>
+	<%= link_to "x", [@recipe,ingredient], method: :delete %>
+</li>
