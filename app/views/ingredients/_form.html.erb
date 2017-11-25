@@ -15,7 +15,7 @@
     <%= f.label 'name' %> 
     <%= f.text_field :name %> 
     <%= f.label 'amount' %> 
-    <%= f.text_field :amount %>
+    <%= f.number_field :amount, step: 0.001 %>
     <%= f.label 'measurement' %> 
     <%= f.text_field :measure %>
     <br>

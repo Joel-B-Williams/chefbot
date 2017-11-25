@@ -4,6 +4,7 @@
 <%= link_to 'Back', recipes_path %>
 
 <%= @recipe.name %>
+<p>Feeds: <%= @recipe.yield %></p>
 <!-- show list of existing ingredients -->
 <ul>
 	<% @recipe.ingredients.each do |ingredient| %>

@@ -14,7 +14,11 @@
   <div class="actions">
 
     <%= f.label "Name" %> 
-    <%= f.text_field :name %> 
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label "Yield" %> 
+    <%= f.number_field :yield %> 
     <% if Recipe.exists?(@recipe.id) %>
       <br>
       <!-- show list of existing ingredients -->
@@ -27,9 +31,9 @@
       <br>
       <%= f.label "Instructions" %> 
       <%= f.text_area :instructions %>
-      <br>
-      <br>
     <% end %>
+    <br>
+    <br>
     <%= f.submit "Create Recipe"%>
   </div>
 <% end %>
