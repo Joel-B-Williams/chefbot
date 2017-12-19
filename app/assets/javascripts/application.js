@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+	scaleRecipe();
+});
+
+function scaleRecipe(){
+	$('div#scale_div form').on('submit', function(e){
+		e.preventDefault();
+		var data = {val: $('select#scale').val()};
+		$.ajax({ data: data })
+		.done(function(response){
+			console.log(response);
+			var yield = $('div#yield p').html();
+			console.log(yield);
+			$('div#yield p').html(yield*response);
+		})
+	});
+}

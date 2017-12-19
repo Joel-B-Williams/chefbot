@@ -4,15 +4,29 @@
 <%= link_to 'Back', recipes_path %>
 
 <%= @recipe.name %>
-<p>Feeds: <%= @recipe.yield %></p>
+<div id="yield">
+	<h3>Feeds: </h3>
+	<p>
+		<%= @recipe.yield %>
+	</p>
+</div>
 <!-- show list of existing ingredients -->
 <ul>
 	<% @recipe.ingredients.each do |ingredient| %>
 	<li>
 	  <%= ingredient.name%>
-	  <%= ingredient.amount%>
+	  <%= ingredient.amount %>
 	  <%= ingredient.measure%>
 	</li>
 	<% end %>
 </ul>
-<%= @recipe.instructions %>
+<div>
+	<%= @recipe.instructions %>
+</div>
+<div id="scale_div">
+	<%= form_for :recipe do |f| %>
+		<%= label_tag 'Scale Recipe' %>
+		<%= select_tag :scale, options_for_select(1..10) %>
+		<%= f.submit "Scale Recipe" %>
+	<% end %>
+</div>
