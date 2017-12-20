@@ -10,11 +10,6 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
-    if request.xhr?
-      render json: params[:val]
-    else
-      render :show
-    end
   end
 
   # GET /recipes/new

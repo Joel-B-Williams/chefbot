@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
 	scaleYield();
 	scaleAmounts();
 });
@@ -24,11 +24,8 @@ function scaleYield(){
 	var yield = $('div#yield p').html();
 	$('select#scale').on('change', function(e){
 		e.preventDefault();
-		var data = {val: $('select#scale').val()};
-		$.ajax({ data: data })
-		.done(function(response){
-			$('div#yield p').html(yield*response)
-		})
+		var multiplier = $('select#scale').val();
+		$('div#yield p').html(yield*multiplier);
 	});
 }
 
