@@ -16,19 +16,34 @@
 //= require_tree .
 
 $(document).ready(function() {
-	scaleRecipe();
+	scaleYield();
+	scaleAmounts();
 });
 
-function scaleRecipe(){
-	$('div#scale_div form').on('submit', function(e){
+function scaleYield(){
+	var yield = $('div#yield p').html();
+	$('select#scale').on('change', function(e){
 		e.preventDefault();
 		var data = {val: $('select#scale').val()};
 		$.ajax({ data: data })
 		.done(function(response){
-			console.log(response);
-			var yield = $('div#yield p').html();
-			console.log(yield);
-			$('div#yield p').html(yield*response);
+			$('div#yield p').html(yield*response)
 		})
+	});
+}
+
+function scaleAmounts() {
+	var storage = [];
+	$('.amount').each(function(idx, domject) {
+		var amount = $(this).text().trim()
+		storage.push(amount);
+
+		$('select#scale').on('change', function(e) {
+			e.preventDefault();
+			var multiplier = $('select#scale').val();
+			$('.amount').each(function(idx, domject) {
+				$(this).html(storage[idx]*multiplier)
+			})
+		});
 	});
 }

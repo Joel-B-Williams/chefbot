@@ -11,22 +11,21 @@
 	</p>
 </div>
 <!-- show list of existing ingredients -->
-<ul>
 	<% @recipe.ingredients.each do |ingredient| %>
+<ul class="ingredient_list">
 	<li>
 	  <%= ingredient.name%>
+	</li>
+	<li class="amount">
 	  <%= ingredient.amount %>
+	</li>
+	<li>
 	  <%= ingredient.measure%>
 	</li>
-	<% end %>
 </ul>
+	<% end %>
 <div>
 	<%= @recipe.instructions %>
 </div>
-<div id="scale_div">
-	<%= form_for :recipe do |f| %>
-		<%= label_tag 'Scale Recipe' %>
-		<%= select_tag :scale, options_for_select(1..10) %>
-		<%= f.submit "Scale Recipe" %>
-	<% end %>
-</div>
+<%= label_tag 'Scale Recipe' %>
+<%= select_tag :scale, options_for_select(1..10) %>

@@ -11,12 +11,8 @@ class RecipesController < ApplicationController
   # GET /recipes/1.json
   def show
     if request.xhr?
-      p"*"*50
-      p 'XHR INBOUND'
       render json: params[:val]
     else
-      p"*"*50
-      p 'reh-ghu-lahr html'
       render :show
     end
   end
