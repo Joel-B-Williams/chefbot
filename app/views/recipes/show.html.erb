@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<% if logged_in? && is_admin?(current_user) %>
+	<%= link_to 'Edit', edit_recipe_path(@recipe) %> 
+<% end %>
 <%= link_to 'Back', recipes_path %>
 <h2>
 	<%= @recipe.name %>

@@ -12,10 +12,11 @@
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= recipe.name %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to recipe.name, recipe %></td>
+        <% if logged_in? && is_admin?(current_user) %>
+          <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,5 +27,8 @@
 <%= link_to 'New Recipe', new_recipe_path %>
 <br>
 <br>
-<%= link_to 'Admin Login', login_path %>
-<%= link_to 'Admin Logout', logout_path %>
+<% if logged_in? && is_admin?(current_user) %>
+  <%= link_to 'Admin Logout', logout_path %>
+<% else %>
+  <%= link_to 'Admin Login', login_path %>
+<% end %>
