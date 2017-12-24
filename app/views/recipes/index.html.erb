@@ -23,8 +23,9 @@
 </table>
 
 <br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
+<% if logged_in? && is_admin?(current_user) %>
+  <%= link_to 'New Recipe', new_recipe_path %>
+<% end %>
 <br>
 <br>
 <% if logged_in? && is_admin?(current_user) %>
