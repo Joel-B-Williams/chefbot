@@ -1,0 +1,12 @@
+<%= link_to "Back", recipes_path %>
+<br>
+<br>
+<%= form_for :sessions do |f| %>
+	<%= f.label "Username" %>
+	<%= f.text_field :username %>
+	<%= f.label "Password" %>
+	<%= f.password_field :password %>
+	<br>
+	<br>
+	<%= f.submit "login"%>
+<% end %>
