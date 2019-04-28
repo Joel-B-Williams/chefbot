@@ -1,0 +1,41 @@
+.nav-link {
+  /* display: block; */
+}
+
+.name {
+  font-size: 2.5em;
+  width: 50%;
+}
+
+.yield, .yield *, .scale, .scale * {
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.ingredients {
+  font-size: 1.5em;
+  width: 80%;
+  margin: 5% auto;
+}
+
+.ingredients table {
+  margin: auto;
+  text-align: left;
+}
+
+.ingredients td {
+  font-size: 1.25em;
+}
+
+.instructions {
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .details {
+    display: flex;
+    align-items: center;
+  }
+}
