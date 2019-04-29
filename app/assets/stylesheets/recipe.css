@@ -38,4 +38,12 @@
     display: flex;
     align-items: center;
   }
+
+  .ingredients, .instructions {
+    flex: 1 1 0;
+  }
+
+  .instructions p{
+    font-size: 1em;
+  }
 }

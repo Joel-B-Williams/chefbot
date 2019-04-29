@@ -16,9 +16,9 @@ class IngredientsController < ApplicationController
 		@recipe = Recipe.find(params[:recipe_id])
 	end
 	
-	def create
+	def create #
 		@ingredient = Ingredient.new(ingredient_params)
-		@recipe = Recipe.find(params[:recipe_id])
+		@recipe = Recipe.find(params[:recipe_id]) #check params with partial form, just listed as id?
 		@ingredient.recipe_id = @recipe.id
 
 		respond_to do |format|

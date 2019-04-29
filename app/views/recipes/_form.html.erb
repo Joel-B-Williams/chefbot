@@ -12,22 +12,16 @@
   <% end %>
 
   <div class="actions">
-
     <%= f.label "Name" %> 
     <%= f.text_field :name %>
     <br>
-    <br>
-    <%= f.label "Yield" %> 
-    <%= f.number_field :yield %> 
     <% if Recipe.exists?(@recipe.id) %>
       <br>
-      <!-- show list of existing ingredients -->
+      <%= f.label "Yield" %> 
+      <%= f.number_field :yield %> 
+      <br>
       <%= f.label "Ingredients" %> 
-      <ul>
-        <%= render @ingredients %>
-      </ul>
-      <!-- move to EDIT so you have access to recipe id -->
-      <%= link_to 'Add Ingredient', new_recipe_ingredient_path(@recipe) %>  
+      <ul><%= render @ingredients %></ul>
       <br>
       <%= f.label "Instructions" %> 
       <%= f.text_area :instructions %>
@@ -35,5 +29,9 @@
     <br>
     <br>
     <%= f.submit "Create Recipe"%>
-  </div>
-<% end %>
+    </div>
+    <% end %>
+    
+  <% if Recipe.exists?(@recipe.id) %>
+    <%= render partial: "ingredients/form", locals: {recipe: @recipe, ingredient: Ingredient.new } %>
+  <% end %>
