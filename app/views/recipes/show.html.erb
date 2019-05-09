@@ -8,14 +8,16 @@
 	<%= @recipe.name %>
 </h2>
 
-<div class="yield">
-	<h3>Feeds: </h3>
-	<p><%= @recipe.yield %></p>
-</div>
+<div class="recipe-feeds">
+	<section class="yield">
+		<p>Feeds: </p>
+		<p><%= @recipe.yield %></p>
+	</section>
 
-<div class="scale">
-	<%= label_tag 'Scale Recipe' %>
-	<%= select_tag :scale, options_for_select(1..10) %>
+	<section class="scale">
+		<p>Scale: </p>
+		<%= select_tag :scale, options_for_select(1..10) %>
+	</section>
 </div>
 
 <div class="details">

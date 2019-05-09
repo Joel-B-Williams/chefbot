@@ -1,37 +1,37 @@
-<%= form_for(recipe) do |f| %>
-  <% if recipe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
-
-      <ul>
-      <% recipe.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+  <section>
+    <div class="form recipe-form"> 
+      <%= form_for(recipe) do |f| %>
+        <% if recipe.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+            <ul>
+            <% recipe.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+          
+        <div class="actions field-container">
+            <%= f.label "Name", class: 'form-label' %> 
+            <%= f.text_field :name, class: 'form-field' %>
+            <br>
+            <% if Recipe.exists?(recipe.id) %>
+              <%= f.label "Yield", class: 'form-label' %> 
+              <%= f.number_field :yield, class: 'form-field'%> 
+              <%= f.label "Instructions", class: 'form-label' %> 
+              <%= f.text_area :instructions, class: 'recipe-instructions form-field' %>
+            <% end %>
+            <br>
+            <%= f.submit "Create Recipe", class: 'form-btn btn'%>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
+  </section>
 
-  <div class="actions">
-    <%= f.label "Name" %> 
-    <%= f.text_field :name %>
-    <br>
-    <% if Recipe.exists?(@recipe.id) %>
-      <br>
-      <%= f.label "Yield" %> 
-      <%= f.number_field :yield %> 
-      <br>
-      <%= f.label "Ingredients" %> 
-      <ul><%= render @ingredients %></ul>
-      <br>
-      <%= f.label "Instructions" %> 
-      <%= f.text_area :instructions %>
+  <section>
+    <% if Recipe.exists?(recipe.id) %>
+    <%= render partial: "ingredients/form", locals: {recipe: recipe, ingredient: Ingredient.new } %>
+      <ul class="ingredient-list"><%= render @ingredients %></ul>
     <% end %>
-    <br>
-    <br>
-    <%= f.submit "Create Recipe"%>
-    </div>
-    <% end %>
-    
-  <% if Recipe.exists?(@recipe.id) %>
-    <%= render partial: "ingredients/form", locals: {recipe: @recipe, ingredient: Ingredient.new } %>
-  <% end %>
+  </section>

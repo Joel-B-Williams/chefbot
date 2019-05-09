@@ -21,11 +21,11 @@ $(document).on('turbolinks:load', function() {
 });
 
 function scaleYield(){
-	var yield = $('div.yield p').html();
+	var yield = $('section.yield p:last-child').html();
 	$('select#scale').on('change', function(e){
 		e.preventDefault();
 		var multiplier = $('select#scale').val();
-		$('div.yield p').html(yield*multiplier);
+		$('section.yield p:last-child').html(yield*multiplier);
 	});
 }
 

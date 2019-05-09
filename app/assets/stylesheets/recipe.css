@@ -3,17 +3,25 @@
 }
 
 .name {
-  font-size: 2.5em;
-  width: 50%;
+  /* font-size: 2em; */
+  width: 90%;
+  text-align: center;
+  margin: 5% auto;
 }
 
 .yield, .yield *, .scale, .scale * {
   display: inline-block;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
+}
+
+.recipe-feeds {
+  display: flex;
+  justify-content: space-around;
+  /* font-size: 1.5em; */
 }
 
 .ingredients {
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   width: 80%;
   margin: 5% auto;
 }
@@ -24,11 +32,11 @@
 }
 
 .ingredients td {
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
 }
 
 .instructions {
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   display: inline-block;
 }
 
@@ -44,6 +52,6 @@
   }
 
   .instructions p{
-    font-size: 1em;
+    /* font-size: 1em; */
   }
 }

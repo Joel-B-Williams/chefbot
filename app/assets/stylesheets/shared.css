@@ -1,0 +1,9 @@
+li {
+  list-style: none;
+} 
+
+.btn {
+  border-radius: 8px;
+  background-color: #126d61;
+  color: antiquewhite;
+}
