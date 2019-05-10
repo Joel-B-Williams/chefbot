@@ -1,5 +1,13 @@
 <h1>Editing Recipe</h1>
+
 <%= render 'form', recipe: @recipe %>
+
+<section class="form-container">
+  <% if Recipe.exists?(@recipe.id) %>
+    <%= render partial: "ingredients/form", locals: {recipe: @recipe, ingredient: Ingredient.new } %>
+    <ul class="ingredient-list"><%= render @ingredients %></ul>
+  <% end %>
+</section>
 
 <%= link_to 'Show', @recipe %> |
 <%= link_to 'Back', recipes_path %>

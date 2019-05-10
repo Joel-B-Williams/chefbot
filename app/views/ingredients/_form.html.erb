@@ -4,15 +4,15 @@
     <div id="error_explanation">
     <h2><%= pluralize(ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
     
-    <ul>
-    <% ingredient.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
+      <ul>
+      <% ingredient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
       <% end %>
       </ul>
-      </div>
-      <% end %>
+    </div>
+    <% end %>
       
-      <div class="actions">
+    <div class="actions">
       <%= f.label 'name', class: 'form-label' %> 
       <%= f.text_field :name, class: 'form-field' %> 
       <%= f.label 'amount', class: 'form-label' %> 
@@ -20,7 +20,6 @@
       <%= f.label 'measurement', class: 'form-label' %> 
       <%= f.select :measure, ['c', 'tbsp', 'tsp', 'lb', 'oz', 'g', 'ea'],{}, {class: 'form-field ingredient-measure'}%> 
       <%= f.submit "Add to pot", class: 'form-btn btn'%>
-      </div>
-    <% end %>
-    
-  </div>
+    </div>
+  <% end %>
+</div>

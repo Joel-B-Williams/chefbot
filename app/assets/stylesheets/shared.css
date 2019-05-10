@@ -7,3 +7,7 @@ li {
   background-color: #126d61;
   color: antiquewhite;
 }
+
+.btn:active {
+  background-color: #25a392;
+}
