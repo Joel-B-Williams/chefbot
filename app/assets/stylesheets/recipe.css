@@ -16,9 +16,26 @@
   justify-content: space-around;
 }
 
+.intro {
+  background-color: antiquewhite;
+  border: solid black 1px;
+  border-radius: 12px;
+}
+
 .ingredients {
-  width: 80%;
+  width: 100%;
   margin: 5% auto;
+  background-color: antiquewhite;
+  border: solid black 1px;
+  border-radius: 12px;
+}
+
+.instructions {
+  width: 100%;
+  display: inline-block;
+  background-color: antiquewhite;
+  border: solid black 1px;
+  border-radius: 12px;
 }
 
 .ingredients table {
@@ -29,21 +46,27 @@
 .ingredients td {
 }
 
-.instructions {
-  display: inline-block;
-}
-
 @media only screen and (min-width: 1200px) {
+  .name {
+    margin: 2% auto;
+  }
 
   .details {
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
   }
-
+  
   .ingredients, .instructions {
-    flex: 1 1 0;
+    flex-basis: 40%;
+    margin: 0;
   }
 
-  .instructions p{
+  .recipe-feeds {
+    justify-content: center;
+  }
+
+  .intro {
+    width: 40%;
+    margin: 2% auto;
   }
 }

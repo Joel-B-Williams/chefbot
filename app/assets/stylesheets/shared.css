@@ -1,3 +1,7 @@
+textarea {
+  resize: none;
+}
+
 li {
   list-style: none;
 } 
@@ -5,9 +9,9 @@ li {
 .btn {
   border-radius: 8px;
   background-color: #126d61;
-  color: antiquewhite;
+  color: white;
 }
 
 .btn:active {
-  background-color: #25a392;
+  background-color: #147f71;
 }

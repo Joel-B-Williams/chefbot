@@ -1,4 +1,6 @@
 <h1>Editing Recipe</h1>
+<%= link_to 'Show', @recipe %> |
+<%= link_to 'Back', recipes_path %>
 
 <%= render 'form', recipe: @recipe %>
 
@@ -9,5 +11,3 @@
   <% end %>
 </section>
 
-<%= link_to 'Show', @recipe %> |
-<%= link_to 'Back', recipes_path %>
