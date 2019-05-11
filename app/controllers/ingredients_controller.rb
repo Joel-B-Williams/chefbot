@@ -16,9 +16,9 @@ class IngredientsController < ApplicationController
 		@recipe = Recipe.find(params[:recipe_id])
 	end
 	
-	def create
+	def create 
 		@ingredient = Ingredient.new(ingredient_params)
-		@recipe = Recipe.find(params[:recipe_id])
+		@recipe = Recipe.find(params[:recipe_id]) #check params with partial form, just listed as id?
 		@ingredient.recipe_id = @recipe.id
 
 		respond_to do |format|
@@ -37,7 +37,7 @@ class IngredientsController < ApplicationController
 		recipe = Recipe.find(params[:recipe_id])
 		 respond_to do |format|
       if @ingredient.update(ingredient_params)
-        format.html { redirect_to recipe_path(recipe), notice: 'ingredient was successfully updated.' }
+        format.html { redirect_to edit_recipe_path(recipe), notice: 'ingredient was successfully updated.' }
         format.json { render :show, status: :created, location: @ingredient }
       else
         format.html { render :edit }
@@ -51,7 +51,7 @@ class IngredientsController < ApplicationController
 		recipe = Recipe.find(params[:recipe_id])
 		ingredient.destroy
 		respond_to do |format|
-      format.html { redirect_to recipe_path(recipe), notice: 'Ingredient was successfully destroyed.' }
+      format.html { redirect_to edit_recipe_path(recipe), notice: 'Ingredient was successfully destroyed.' }
       format.json { head :no_content }
     end
 	end

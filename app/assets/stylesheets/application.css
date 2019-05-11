@@ -14,7 +14,3 @@
  *= require_self
  */
 
- .ingredient_list li {
- 		display: inline-block;
- 		list-style: none;
- }

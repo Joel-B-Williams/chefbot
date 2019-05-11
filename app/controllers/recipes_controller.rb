@@ -1,5 +1,6 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :gather_ingredients, only: [:show, :edit]
 
   # GET /recipes
   # GET /recipes.json
@@ -10,6 +11,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @ingredients = @recipe.ingredients.order('id ASC')
   end
 
   # GET /recipes/new
@@ -19,7 +21,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
-    @ingredients = @recipe.ingredients
+    @ingredients = @recipe.ingredients.order('id ASC')
   end
 
   # POST /recipes
@@ -67,6 +69,10 @@ class RecipesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_recipe
       @recipe = Recipe.find(params[:id])
+    end
+
+    def gather_ingredients
+      @ingredients = @recipe.ingredients.order('id ASC')
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

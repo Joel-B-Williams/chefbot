@@ -1,0 +1,68 @@
+html, body {
+  margin: 0;
+  padding 0;
+}
+
+textarea {
+  resize: none;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 20px;
+  font-family: shadows into light;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+li {
+  list-style: none;
+  padding: 2% 0;
+} 
+
+table {
+  padding: 1%;
+}
+
+th {
+  color: #126d61;
+  font-size: 20px;
+  font-family: dancing script;
+}
+
+td {
+  font-size: 20px;
+  font-family: shadows into light;
+}
+
+.btn {
+  border-radius: 8px;
+  background-color: #126d61;
+  color: white;
+  font-size: 20px;
+}
+
+.btn:active {
+  background-color: #147f71;
+}
+
+.dropdown {
+  background-color: #126d61;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: shadows into light;
+}

@@ -1,34 +1,44 @@
-<p id="notice"><%= notice %></p>
 
 <% if logged_in? && is_admin?(current_user) %>
-	<%= link_to 'Edit', edit_recipe_path(@recipe) %> 
+	<%= link_to 'Edit', edit_recipe_path(@recipe), class: "nav-link" %> 
 <% end %>
-<%= link_to 'Back', recipes_path %>
-<h2>
-	<%= @recipe.name %>
-</h2>
-<div id="yield">
-	<h3>Feeds: </h3>
-	<p>
-		<%= @recipe.yield %>
-	</p>
+<%= link_to 'Back', recipes_path, class: "nav-link" %>
+<div class="intro">
+	<h2 class="name">
+		<%= @recipe.name %>
+	</h2>
+
+	<div class="recipe-feeds">
+		<section class="yield">
+			<p>Feeds: </p>
+			<p><%= @recipe.yield %></p>
+		</section>
+
+		<section class="scale">
+			<p>Scale: </p>
+			<%= select_tag :scale, options_for_select(1..10), class: 'dropdown' %>
+		</section>
+	</div>
 </div>
-<!-- show list of existing ingredients -->
-<% @recipe.ingredients.each do |ingredient| %>
-<ul class="ingredient_list">
-	<li>
-	  <%= ingredient.name%>
-	</li>
-	<li class="amount">
-	  <%= ingredient.amount %>
-	</li>
-	<li>
-	  <%= ingredient.measure%>
-	</li>
-</ul>
-<% end %>
-<div>
-	<%= @recipe.instructions %>
+
+<div class="details">
+	<section class="ingredients"> 
+		<table>
+			<tr>
+				<th>Ingredient</th>
+				<th colspan="2">Amount</th>
+			</tr>
+			<% @ingredients.each do |ingredient| %>
+			<tr>
+				<td><%= ingredient.name %></td>
+				<td class="amount"><%= ingredient.amount %></td>
+				<td><%= ingredient.measure %></td>
+			</tr>
+			<% end %>
+		</table>
+	</section>
+	
+	<section class="instructions">
+		<%= simple_format(@recipe.instructions) %>
+	</section>
 </div>
-<%= label_tag 'Scale Recipe' %>
-<%= select_tag :scale, options_for_select(1..10) %>
