@@ -1,28 +1,26 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Recipes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @recipes.each do |recipe| %>
+<div>
+  <table class='recipe-list'>
+    <thead>
       <tr>
-        <td><%= link_to recipe.name, recipe %></td>
-        <% if logged_in? && is_admin?(current_user) %>
-          <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @recipes.each do |recipe| %>
+        <tr>
+          <td class='recipe-list-item'><%= link_to recipe.name, recipe %></td>
+          <% if logged_in? && is_admin?(current_user) %>
+            <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+            <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 <% if logged_in? && is_admin?(current_user) %>
   <%= link_to 'New Recipe', new_recipe_path %>
 <% end %>

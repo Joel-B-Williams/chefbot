@@ -1,10 +1,9 @@
-.nav-link {
-}
-
 .name {
   width: 90%;
   text-align: center;
   margin: 5% auto;
+  color: #126d61;
+  font-family: dancing script;
 }
 
 .yield, .yield *, .scale, .scale * {
@@ -16,26 +15,20 @@
   justify-content: space-around;
 }
 
-.intro {
-  background-color: antiquewhite;
-  border: solid black 1px;
-  border-radius: 12px;
-}
-
 .ingredients {
   width: 100%;
   margin: 5% auto;
   background-color: antiquewhite;
-  border: solid black 1px;
-  border-radius: 12px;
+  border-top: solid #126d61 1px;
+  border-bottom: solid #126d61 1px;
 }
 
 .instructions {
   width: 100%;
   display: inline-block;
   background-color: antiquewhite;
-  border: solid black 1px;
-  border-radius: 12px;
+  border-top: solid #126d61 1px;
+  border-bottom: solid #126d61 1px;
 }
 
 .ingredients table {
@@ -58,7 +51,9 @@
   
   .ingredients, .instructions {
     flex-basis: 40%;
+    align-items: center;
     margin: 0;
+    border: solid #126d61 1px;
   }
 
   .recipe-feeds {

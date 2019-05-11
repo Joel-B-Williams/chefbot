@@ -1,6 +1,7 @@
 .form-container {
-  border: solid black 1px;
-  border-radius: 12px;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+  /* border-radius: 12px; */
   background-color: antiquewhite;
   padding: 1% 0;
   margin: 3% 0;
@@ -10,19 +11,19 @@
   display: inline-block;
   width: 20%;
   margin: 3%;
-  font-size: 18px;
+  font-size: 24px;
+  color: #126d61;
 }
 
 .form-field {
   display: inline-block;
   width: 51%;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .form-btn {
   display: block;
   margin: 5% auto;
-  font-size: 18px;
 }
 
 .recipe-instructions {
@@ -30,22 +31,19 @@
   width: 90%;
   min-height: 200px;;
   margin: auto;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .ingredient-measure {
   width: 10%;
   margin-left: 18.5%;
-  background-color: #126d61;
-  color: white;
-  border-radius: 8px;
 }
 
 .ingredient-list {
   display: block;
   margin: auto;
-  width: 30%;
-  font-size: 18px;
+  width: 40%;
+  font-size: 24px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -71,5 +69,9 @@
 
   .instructions-label {
     display: inline-block;
+  }
+
+  .ingredient-list {
+    width: 60%;
   }
 }

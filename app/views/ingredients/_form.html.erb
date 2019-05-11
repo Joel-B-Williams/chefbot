@@ -18,7 +18,7 @@
       <%= f.label 'amount', class: 'form-label' %> 
       <%= f.number_field :amount, step: 0.01, class: 'form-field' %>
       <%= f.label 'measurement', class: 'form-label' %> 
-      <%= f.select :measure, ['c', 'tbsp', 'tsp', 'lb', 'oz', 'g', 'ea'],{}, {class: 'form-field ingredient-measure'}%> 
+      <%= f.select :measure, ['c', 'tbsp', 'tsp', 'lb', 'oz', 'g', 'ea'],{}, {class: 'form-field ingredient-measure dropdown'}%> 
       <%= f.submit "Add to pot", class: 'form-btn btn'%>
     </div>
   <% end %>

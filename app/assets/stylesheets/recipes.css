@@ -1,0 +1,9 @@
+.recipe-list {
+  display: block;
+  width: 60%;
+  margin: auto;
+}
+
+.recipe-list-item {
+  font-family: dancing script;
+}
