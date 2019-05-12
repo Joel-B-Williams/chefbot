@@ -8,12 +8,12 @@ textarea {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 4em;
 }
 
 p {
-  font-size: 20px;
   font-family: shadows into light;
+  font-size: 3em;
 }
 
 a {
@@ -35,17 +35,21 @@ li {
 
 table {
   padding: 1%;
+  width: 80%;
 }
 
 th {
-  color: #126d61;
-  font-size: 20px;
+  font-size: 3em;
   font-family: dancing script;
+  color: #126d61;
+  padding: 5%;
 }
 
 td {
-  font-size: 20px;
+  font-size: 3em;
   font-family: shadows into light;
+  padding: 2%;
+  max-width: 50%;
 }
 
 .btn {
@@ -62,7 +66,18 @@ td {
 .dropdown {
   background-color: #126d61;
   color: white;
-  border-radius: 8px;
-  font-size: 20px;
+  border-radius: 40px;
+  font-size: 3em;
   font-family: shadows into light;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 3em;
+  }
+
+  p, th, td, .dropdown {
+    font-size: 1.5em;
+  }
 }
