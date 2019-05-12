@@ -10,6 +10,10 @@
   display: inline-block;
 }
 
+.yield p:last-child {
+  font-weight: bold;
+}
+
 .recipe-feeds {
   display: flex;
   justify-content: space-around;
@@ -36,9 +40,6 @@
   text-align: left;
 }
 
-.ingredients td {
-}
-
 @media only screen and (min-width: 1200px) {
   .name {
     margin: 2% auto;
@@ -58,10 +59,5 @@
 
   .recipe-feeds {
     justify-content: center;
-  }
-
-  .intro {
-    width: 40%;
-    margin: 2% auto;
   }
 }
