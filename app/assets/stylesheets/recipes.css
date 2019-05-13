@@ -1,11 +1,30 @@
 .recipe-list {
   display: block;
-  width: 60%;
-  margin: auto;
+  width: 100%;
+  padding: 0;
+  border-spacing: 0px 15px;
 }
 
 .recipe-list-item {
   font-family: dancing script;
-  font-size: 3em;
-  padding: 2%;
+  font-size: 4em;
+  background-color: antiquewhite;
+  /* color: #126d61; */
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .recipe-list {
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    border-spacing: 0px 15px;
+  }
+
+  .recipe-list-item {
+    font-size: 3em;
+    border: solid black 1px;
+  }
 }
