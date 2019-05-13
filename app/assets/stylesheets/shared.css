@@ -9,23 +9,26 @@ textarea {
 
 h2 {
   font-size: 4em;
+  line-height: 1em;
 }
 
 p {
   font-family: shadows into light;
   font-size: 3em;
+  line-height: 1em;
 }
 
 a {
   text-decoration: none;
+  color: #126d61;
 }
 
 a:hover {
-  background-color: white;
+  background-color: transparent;
 }
 
 a:visited {
-  color: black;
+  color: #126d61;
 }
 
 li {
@@ -46,10 +49,11 @@ th {
 }
 
 td {
+  padding: 2%;
+  max-width: 60%;
   font-size: 3em;
   font-family: shadows into light;
-  padding: 2%;
-  max-width: 50%;
+  line-height: 1em;
 }
 
 .btn {
