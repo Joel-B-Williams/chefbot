@@ -8,8 +8,8 @@
 .recipe-list-item {
   font-family: dancing script;
   font-size: 4em;
+  width: 100%;
   background-color: antiquewhite;
-  /* color: #126d61; */
   border-top: solid black 1px;
   border-bottom: solid black 1px;
 }
