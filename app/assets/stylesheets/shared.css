@@ -75,6 +75,11 @@ td {
   font-weight: bold;
 }
 
+/* img {
+  width: 10%;
+  margin: 1%;
+} */
+
 @media only screen and (min-width: 1200px) {
   h2 {
     font-size: 3em;
@@ -83,4 +88,8 @@ td {
   p, th, td, .dropdown {
     font-size: 1.5em;
   }
+
+  /* img {
+    width: 30px;
+  } */
 }

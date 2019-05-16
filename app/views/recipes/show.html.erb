@@ -1,8 +1,7 @@
 
 <% if logged_in? && is_admin?(current_user) %>
-	<%= link_to 'Edit', edit_recipe_path(@recipe), class: "nav-link" %> 
+	<%= link_to image_tag('edit.png'), edit_recipe_path(@recipe), class: "nav-link" %> 
 <% end %>
-<%= link_to 'Back', recipes_path, class: "nav-link" %>
 <div class="intro">
 	<h2 class="name">
 		<%= @recipe.name %>
