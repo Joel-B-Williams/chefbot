@@ -1,0 +1,16 @@
+<div class='header'>
+  <nav>
+    <%= link_to image_tag('back.png', class: 'back'), 'javascript:history.back()', class: 'nav-link' %>
+  </nav>
+  <section class='title-section'>
+    <%= link_to 'ChefBot', root_path, class: 'title' %>
+  </section>
+  <nav class='nav-menu'>
+    <% if logged_in? && is_admin?(current_user) %>
+      <%= link_to image_tag('chefHat.png', alt: 'create recipe', class: 'create-recipe'), new_recipe_path, class: 'nav-link' %>
+      <%= link_to image_tag('logout.png', class: 'logout'), logout_path, class: 'nav-link' %>
+    <% else %>
+      <%= link_to image_tag('login.png', class: 'login'), login_path, class: 'nav-link' %>
+    <% end %>
+  </nav>
+</div>

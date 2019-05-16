@@ -1,0 +1,49 @@
+.header {
+  background-color: #126d61;
+  display: flex;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: white;
+  font-family: dancing script;
+  font-size: 5em;
+}
+
+.title:visited {
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  width: 25%;
+  height: 100%;
+}
+
+.back {
+  width: 100%;
+}
+
+.login {
+  width: 90%;
+}
+
+.logout {
+  width: 55%;
+}
+
+.create-recipe {
+  width: 50%; 
+}
