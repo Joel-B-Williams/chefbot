@@ -6,6 +6,14 @@
   margin: 3% 0;
 }
 
+.user-form-container {
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+  background-color: antiquewhite;
+  padding: 1% 0;
+  margin: 3% 0;
+}
+
 .form-label {
   display: inline-block;
   width: 20%;
@@ -56,6 +64,22 @@
     background-color: antiquewhite;
     padding: 1% 0;
   }
+  
+  .user-form-container {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-form {
+    vertical-align: top;
+    border: solid black 1px;
+    border-radius: 12px;
+    background-color: antiquewhite;
+    padding: 1% 0;
+  }
+
   .recipe-form {
     display: inline-block;
     width: 100%;
