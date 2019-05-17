@@ -1,17 +1,40 @@
 .recipe-list {
-  display: block;
   width: 100%;
   padding: 0;
-  border-spacing: 0px 15px;
+  margin: 0;
 }
 
 .recipe-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: dancing script;
   font-size: 4em;
-  width: 10%;
   background-color: antiquewhite;
   border-top: solid black 1px;
   border-bottom: solid black 1px;
+  margin-bottom: 2%;
+  padding: 3% 0;
+}
+
+.recipe-name {
+  margin-left: 2%;
+}
+
+.edit-menu {
+  align-self: flex-end;
+  display: flex;
+  justify-content: right;
+  width: 15%;
+}
+
+.edit {
+  width: 45%;
+}
+
+.delete {
+  width: 24%;
 }
 
 @media only screen and (min-width: 1200px) {

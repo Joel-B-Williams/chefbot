@@ -6,6 +6,7 @@
 .title-section {
   display: flex;
   align-items: center;
+  flex-grow: 2;
 }
 
 .title {
@@ -21,6 +22,7 @@
 nav {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }
 
 .nav-menu {
@@ -30,6 +32,9 @@ nav {
 .nav-link {
   width: 25%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 .back {
@@ -37,11 +42,11 @@ nav {
 }
 
 .login {
-  width: 90%;
+  width: 75%;
 }
 
 .logout {
-  width: 55%;
+  width: 50%;
 }
 
 .create-recipe {
