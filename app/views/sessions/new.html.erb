@@ -1,12 +1,11 @@
-<%= link_to "Back", recipes_path %>
-<br>
-<br>
-<%= form_for :sessions do |f| %>
-	<%= f.label "Username" %>
-	<%= f.text_field :username %>
-	<%= f.label "Password" %>
-	<%= f.password_field :password %>
-	<br>
-	<br>
-	<%= f.submit "login"%>
-<% end %>
+<div class='user-form-container'>
+	<div class='user-form'>
+		<%= form_for :sessions do |f| %>
+			<%= f.label "Username", class: 'form-label' %>
+			<%= f.text_field :username, class: 'form-field' %>
+			<%= f.label "Password", class: 'form-label' %>
+			<%= f.password_field :password, class: 'form-field' %>
+			<%= f.submit "login", class: 'form-btn btn'%>
+		<% end %>
+	</div>
+</div>
