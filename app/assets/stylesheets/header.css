@@ -1,0 +1,54 @@
+.header {
+  background-color: #126d61;
+  display: flex;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+}
+
+.title {
+  color: white;
+  font-family: dancing script;
+  font-size: 5em;
+}
+
+.title:visited {
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.nav-menu {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.back {
+  width: 100%;
+}
+
+.login {
+  width: 75%;
+}
+
+.logout {
+  width: 50%;
+}
+
+.create-recipe {
+  width: 50%; 
+}
