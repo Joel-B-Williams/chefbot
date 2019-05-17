@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 <div>
-  <table class='recipe-list'>
-    <tbody>
+  <ul class='recipe-list'>
       <% @recipes.each do |recipe| %>
-        <tr class='recipe-list-item-container'>
-          <td class='recipe-list-item'><%= link_to recipe.name, recipe %></td>
+          <li class='recipe-list-item'><%= link_to recipe.name, recipe, class: 'recipe-name' %>
           <% if logged_in? && is_admin?(current_user) %>
-            <td><%= link_to image_tag('edit.png'), edit_recipe_path(recipe) %></td>
-            <td><%= link_to image_tag('delete.png'), recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <section class='edit-menu'>
+            <%= link_to image_tag('edit.png', class: 'edit'), edit_recipe_path(recipe) %>
+            <%= link_to image_tag('delete.png', class: 'delete'), recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </section>
+          </li>
           <% end %>
-        </tr>
       <% end %>
-    </tbody>
-  </table>
+  </ul>
 </div>
