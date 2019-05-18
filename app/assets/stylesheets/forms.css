@@ -1,12 +1,4 @@
-.form-container {
-  border-top: solid black 1px;
-  border-bottom: solid black 1px;
-  background-color: antiquewhite;
-  padding: 1% 0;
-  margin: 3% 0;
-}
-
-.user-form-container {
+.form {
   border-top: solid black 1px;
   border-bottom: solid black 1px;
   background-color: antiquewhite;
@@ -56,38 +48,15 @@
 @media only screen and (min-width: 1200px) {
 
   .form-container {
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
-    border: solid black 1px;
-    border-radius: 12px;
-    background-color: antiquewhite;
-    padding: 1% 0;
-  }
-  
-  .user-form-container {
-    border: none;
-    background-color: transparent;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
-
-  .user-form {
-    vertical-align: top;
+  
+  .form {
     border: solid black 1px;
     border-radius: 12px;
     background-color: antiquewhite;
-    padding: 1% 0;
-  }
-
-  .recipe-form {
-    display: inline-block;
-    width: 100%;
-  }
-  
-  .ingredient-form {
-    display: inline-block;
-    width: 100%;
+    padding: 1% 0; 
   }
 
   .instructions-label {
