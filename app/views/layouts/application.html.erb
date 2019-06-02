@@ -13,6 +13,7 @@
 
   <body>
   <%= render 'shared/header' %>
+  <%= render 'shared/menu' %>
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "flash #{key}" %>
   <% end %>
