@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  width: 10%;
+  background: white;
+  border-left: solid black 1px;
+  border-bottom: solid black 1px;
+}
+
+.menu-link {
+  width: 100%;
+  
+}
+
+.login {
+  width: 75%;
+}
+
+.logout {
+  width: 100%;
+} 
+
+.create-recipe {
+  width: 100%; 
+} 

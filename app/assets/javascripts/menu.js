@@ -7,7 +7,6 @@ function openMenu() {
   var menu = document.getElementsByClassName('menu')[0];
   
   menuBtn.addEventListener("click", function() {
-    console.log('clicked menu button');
     menu.classList.toggle("hidden");
   });
 };
