@@ -1,0 +1,8 @@
+<div class='menu hidden'>
+  <% if logged_in? && is_admin?(current_user) %>
+    <%= link_to image_tag('chefHat.png', alt: 'create recipe', class: 'create-recipe'), new_recipe_path, class: 'menu-link' %>
+    <%= link_to image_tag('logout.png', class: 'logout'), logout_path, class: 'menu-link' %>
+  <% else %>
+    <%= link_to image_tag('login.png', class: 'login'), login_path, class: 'menu-link' %>
+  <% end %>
+</div>
