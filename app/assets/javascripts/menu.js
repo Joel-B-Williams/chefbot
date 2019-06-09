@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded",function(){
-  openMenu();
+  ready();
 });
+
+document.addEventListener("turbolinks:load", function(){
+  ready();
+});
+
+function ready() {
+  openMenu();
+};
 
 function openMenu() {
   var menuBtn = document.getElementsByClassName('menu-btn')[0];
