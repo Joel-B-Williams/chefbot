@@ -33,7 +33,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'figaro'
-
+gem "actionview", ">= 5.0.7.2"
+gem "sprockets", ">= 3.7.2"
+gem "ffi", ">= 1.9.24"
+gem "nokogiri", ">= 1.8.5"
+gem "activejob", ">= 5.0.7.1"
+gem "rack", ">= 2.0.6"
+gem "rails-html-sanitizer", ">= 1.0.4"
+gem "loofah", ">= 2.2.3"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
