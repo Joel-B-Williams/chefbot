@@ -12,11 +12,18 @@
   </head>
 
   <body>
-  <%= render 'shared/header' %>
-  <%= render 'shared/menu' %>
-  <% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "flash #{key}" %>
-  <% end %>
+    <div class='header'></div>
+    <%= javascript_tag do %>
+      if (document.body.offsetWidth <= 1199) {
+       document.getElementsByClassName('header')[0].insertAdjacentHTML("beforeend", "<%= j render 'shared/mobile_header' %>");
+      } else {
+       document.getElementsByClassName('header')[0].insertAdjacentHTML("beforeend", "<%= j render 'shared/header' %>");
+      }
+    <% end %>
+    <%= render 'shared/menu' %>
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
     <%= yield %>
     <%= debug(params) if Rails.env.development? %>
   </body>
