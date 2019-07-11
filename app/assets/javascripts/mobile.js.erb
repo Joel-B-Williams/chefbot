@@ -1,0 +1,12 @@
+document.addEventListener("turbolinks:load", function(){
+  // renderHeader();
+});
+// https://forum.upcase.com/t/rendering-a-view-partial-via-javascript-jquery/1107/6
+// changed to .erb to read Ruby -> but 'render' not available here
+function renderHeader() {
+  if (document.body.offsetWidth <= 499) {
+   document.getElementsByClassName('header')[0].append("<%= j partial: 'shared/mobile_header'%>");
+ } else {
+   document.getElementsByClassName('header')[0].append("<%= j partial: 'shared/header'%>");
+ }
+}
