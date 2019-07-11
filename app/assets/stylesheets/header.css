@@ -44,7 +44,7 @@ nav {
 
 
 /* web view */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 500px) {
   .header-btn {
     color: white;
     font-family: shadows into light;

@@ -26,7 +26,7 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 500px) {
   .menu {
     width: 7%;
   }
