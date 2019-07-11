@@ -35,9 +35,33 @@ nav {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .back {
   width: 100%;
+}
+
+
+/* web view */
+@media only screen and (min-width: 1200px) {
+  .header-btn {
+    color: white;
+    font-family: shadows into light;
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .back-btn {
+    margin: 33px;
+  }
+
+  .back-btn:visited {
+    color: white;
+  }
 }
