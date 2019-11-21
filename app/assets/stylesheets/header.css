@@ -13,7 +13,7 @@
 .title {
   color: white;
   font-family: dancing script;
-  font-size: 5em;
+  font-size: 3em;
 }
 
 .title:visited {
@@ -63,5 +63,9 @@ nav {
 
   .back-btn:visited {
     color: white;
+  }
+
+  .title {
+    font-size: 5em;
   }
 }
